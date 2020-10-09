@@ -1,3 +1,9 @@
+# Introduction to Quantum Computing for Statisticians
+# Nikola Surjanovic
+# Solves the N-Queens problem
+# Some parts borrowed from the "mutual-information-feature-selection" example
+
+
 # Copyright 2019 D-Wave Systems Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,6 +19,7 @@
 # limitations under the License.
 
 # THIS FILE HAS BEEN MODIFIED FROM ITS ORIGINAL (mutual-information-feature-selection)
+# See https://github.com/dwave-examples/mutual-information-feature-selection
 
 # Mostly from D-Wave (I added some libraries)------------------------------
 import itertools
@@ -39,7 +46,7 @@ def run_demo():
     # Declare a binary quadratic model
     bqm = dimod.BinaryQuadraticModel.empty(dimod.BINARY)
     
-    # Mostly me -----------------------------------------------------------
+    # MOSTLY ME -----------------------------------------------------------
     n = 6 # Size of grid is n x n
     qubits = list(range(1,n**2+1))
     qubits = [str(qubit) for qubit in qubits] # Name the qubits
